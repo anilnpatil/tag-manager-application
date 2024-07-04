@@ -1,0 +1,76 @@
+.title {
+  text-align: center;
+  color: #007bff; /* Highlight color */
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.connections-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.connections-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust column width as needed */
+  gap: 20px;
+  max-height: 600px; /* Adjust as needed */
+  width: 100%;
+  overflow-y: auto;
+}
+
+.connection-box {
+  background-color: lightgreen;
+  border: 1px solid #ccc;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.connection-box.selected {
+  background-color: rgb(68, 111, 240);
+  color: black;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px; /* Adjust spacing between buttons */
+}
+
+button.mat-button {
+  padding: 15px 30px; /* Make buttons bigger */
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button.glow-green {
+  background-color: green !important;
+  color: white !important;
+}
+
+button.glow-yellow {
+  background-color: yellow !important;
+  color: black !important;
+}
+
+button.mat-button:disabled {
+  background-color: grey !important;
+  color: white !important;
+}
+
+button.mat-button:not(:disabled):hover {
+  transform: translateY(-2px);
+}
+
+button.mat-button:active {
+  box-shadow: inset 3px 3px 5px #999;
+  transform: translateY(2px);
+}

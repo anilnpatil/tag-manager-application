@@ -1,0 +1,309 @@
+// .container {
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+//   height: calc(100vh - 60px); /* Adjust height to make room for bottom buttons */
+//   padding: 20px;
+// }
+
+// .box {
+//   border: 1px solid #ccc;
+//   padding: 20px;
+//   width: 35%;
+//   height: 80%;
+//   overflow-y: auto;
+// }
+
+// .controls {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .controls button {
+//   margin: 10px 0;
+//   background-color: white;
+//   border: 2px solid #ccc;
+//   border-radius: 5px;
+//   box-shadow: 3px 3px 5px #999;
+//   transition: background-color 0.3s, transform 0.3s;
+// }
+
+// .controls button:active {
+//   box-shadow: inset 3px 3px 5px #999;
+//   transform: translateY(2px);
+// }
+
+// .controls button.selected {
+//   background-color: lightgreen;
+// }
+
+// ul {
+//   list-style-type: none;
+//   padding: 0;
+// }
+
+// li {
+//   padding: 10px;
+//   cursor: pointer;
+// }
+
+// li.selected {
+//   background-color: #00ff04;
+//   color: rgb(41, 9, 247);
+// }
+
+// li.new-tag {
+//   background-color: red;
+//   color: white;
+// }
+
+// .bottom-controls {
+//   position: fixed;
+//   bottom: 0;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   padding: 10px;
+//   background-color: white;
+//   box-shadow: 0 -2px 5px #999;
+// }
+
+// .bottom-controls button {
+//   background-color: #007bff;
+//   color: white;
+//   border: none;
+//   border-radius: 5px;
+//   padding: 10px 20px;
+//   margin: 0 10px;
+//   cursor: pointer;
+//   transition: background-color 0.3s, transform 0.3s;
+//   box-shadow: 3px 3px 5px #999;
+// }
+
+// .bottom-controls button:hover {
+//   transform: translateY(-2px);
+// }
+
+// .bottom-controls button.ok {
+//   background-color: #007bff; /* Default color */
+// }
+
+// .bottom-controls button.cancel {
+//   background-color: #007bff; /* Default color */
+// }
+
+// .bottom-controls button.ok.glow-green {
+//   background-color: #00ff00; /* Green color */
+// }
+
+// .bottom-controls button.cancel.glow-yellow {
+//   background-color: #ffcc00; /* Yellow color */
+// }
+
+// .bottom-controls button:active {
+//   box-shadow: inset 3px 3px 5px #999;
+//   transform: translateY(2px);
+// }
+
+// .message {
+//   position: fixed;
+//   bottom: 70px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   padding: 10px;
+//   border-radius: 5px;
+//   box-shadow: 3px 3px 5px #999;
+//   animation: fadein 0.5s;
+// }
+
+// .message.success {
+//   background-color: #d4edda;
+//   color: #155724;
+// }
+
+// .message.error {
+//   background-color: #f8d7da;
+//   color: #721c24;
+// }
+
+// @keyframes fadein {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+.container-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); /* Adjust height to make room for bottom buttons */
+  padding: 20px;
+  overflow: hidden; /* Prevent common scrollbar */
+}
+
+.connection-detail {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  width: 100%; /* Adjust width as needed */
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 5px #999;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 100%;
+  overflow: hidden; /* Prevent common scrollbar */
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 35%;
+  height: 80%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.fixed-heading {
+  flex-shrink: 0;
+}
+
+.scrollable-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%; /* Align center vertically */
+}
+
+.controls button {
+  margin: 10px 0;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #999;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.controls button:active {
+  box-shadow: inset 3px 3px 5px #999;
+  transform: translateY(2px);
+}
+
+.controls button.selected {
+  background-color: lightgreen;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+li.selected {
+  background-color: #00ff04;
+  color: rgb(41, 9, 247);
+}
+
+li.new-tag {
+  background-color: red;
+  color: white;
+}
+
+.bottom-controls {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 -2px 5px #999;
+}
+
+.bottom-controls button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 3px 3px 5px #999;
+}
+
+.bottom-controls button:hover {
+  transform: translateY(-2px);
+}
+
+.bottom-controls button.ok {
+  background-color: #007bff; /* Default color */
+}
+
+.bottom-controls button.cancel {
+  background-color: #007bff; /* Default color */
+}
+
+.bottom-controls button.ok.glow-green {
+  background-color: #00ff00; /* Green color */
+}
+
+.bottom-controls button.cancel.glow-yellow {
+  background-color: #ffcc00; /* Yellow color */
+}
+
+.bottom-controls button:active {
+  box-shadow: inset 3px 3px 5px #999;
+  transform: translateY(2px);
+}
+
+.message {
+  position: fixed;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #999;
+  animation: fadein 0.5s;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,64 @@
+.menu-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #2196F3; /* Standard color for the menu bar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button.mat-button {
+  color: white;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+button.mat-button:hover {
+  background-color: #1976D2; /* Darker shade of the menu bar color */
+}
+
+button.mat-button:active {
+  background-color: #0D47A1; /* Even darker shade for active state */
+}
+
+.mat-icon {
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.mat-icon:hover {
+  color: #FFEB3B; /* Yellow color on hover */
+}
+
+.connections-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.connection-box {
+  border: 1px solid #92f471;
+  border-radius: 4px;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: lightgreen;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.connection-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.connection-box div {
+  margin: 5px 0;
+}
+
+// .connection-box strong {
+//   color: #2196F3; /* Standard color for strong text in connections */
+// }

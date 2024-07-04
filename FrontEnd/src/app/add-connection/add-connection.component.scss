@@ -1,0 +1,77 @@
+.title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.connection-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: auto;
+  background-color: lightblue; /* Set the background color for the form */
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button.mat-button {
+  margin-right: 10px;
+}
+
+button.mat-raised-button {
+  flex: 1;
+  margin-right: 10px;
+}
+
+button.back-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: yellow !important; /* Change back button color to yellow */
+  color: black !important;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button.back-button:hover {
+  transform: translateY(-2px);
+}
+
+button.back-button:active {
+  box-shadow: inset 3px 3px 5px #999;
+  transform: translateY(2px);
+}
+
+button.cancel-button {
+  background-color: black !important; /* Change cancel button color to yellow */
+  color: lightyellow !important;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button.cancel-button:hover {
+  background-color: yellow !important; /* Lighten cancel button color on hover */
+}
+
+button.cancel-button:active {
+  box-shadow: inset 3px 3px 5px #999;
+  transform: translateY(2px);
+}
+
+.success-message {
+  background-color: rgb(0, 255, 42);
+}
