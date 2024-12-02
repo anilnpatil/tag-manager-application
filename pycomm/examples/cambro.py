@@ -210,4 +210,4 @@ def read_data_tags_from_plc():
             print("Connection to PLC closed.")
 
 if __name__ == '__main__':
-    app.run(debug=True,port=8083)
+    app.run(debug=True, port=8083)

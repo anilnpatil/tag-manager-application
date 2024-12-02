@@ -84,4 +84,21 @@ public class TagsServiceImpl implements TagsService {
             throw new RuntimeException("Failed to delete tags from the database", e);
         }
     }
+
+    @Override
+    public List<String> getSavedTagsByName(String connectionName) throws TagNotFoundException {
+        List<SelectedTag> savedTagsByName = selectedTagRepository.findByConnectionName(connectionName);    
+    
+    if(savedTagsByName.isEmpty()){
+        throw new TagNotFoundException("No saved tags found for the connection");
+    }
+    return savedTagsByName.stream().map(SelectedTag::getTags).collect(Collectors.toList());
+    }
+
+    @Override
+    public String getIpAddressByConnectionName(String connectionName) {
+        // Retrieve the IP address from the connection repository based on connection name
+        Connection connection = connectionRepository.findByName(connectionName);
+        return connection != null ? connection.getIpAddress() : null;
+    }
 }

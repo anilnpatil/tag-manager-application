@@ -12,4 +12,6 @@ public interface TagsService {
     List<SelectedTag> getSavedTags() throws TagNotFoundException;
     List<String> getSavedTags(Long connectionId) throws TagNotFoundException;
     void deleteTags(List<String> tags, Long connectionId) throws RuntimeException;
+    List<String>getSavedTagsByName(String ConnectionName) throws TagNotFoundException;
+    String getIpAddressByConnectionName(String connectionName);
 }

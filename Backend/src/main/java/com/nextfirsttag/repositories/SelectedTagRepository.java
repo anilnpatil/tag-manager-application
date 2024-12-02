@@ -15,4 +15,5 @@ public interface SelectedTagRepository extends JpaRepository<SelectedTag, Long>{
   List<String> findByConnection(Connection connection);
 
   List<SelectedTag> findByConnectionId(Long connectionId);
+  List<SelectedTag> findByConnectionName(String connectionName);
 }

@@ -7,5 +7,7 @@ import com.nextfirsttag.entities.Connection;
 
 @Repository
 public interface ConnectionRepository extends JpaRepository<Connection, Long> {
+
+  Connection findByName(String connectionName);
 }
  

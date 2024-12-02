@@ -12,7 +12,7 @@ c = ClxDriver()
 def insert_data_to_plc():
     try:
         if not c.is_connected():  # Check if the connection is already open
-            c.open('192.168.12.5')  # Open connection to the PLC
+            c.open('10.60.85.21')  # Open connection to the PLC
             print("Connection to PLC established.")
 
         c.forward_open()  # Initialize the session
@@ -45,5 +45,5 @@ def close_connection():
     c.close()
     return "Connection to PLC closed successfully.", 200
 
-if __name__ == '_main_':
-    app.run(debug=True,port=8083)
+if __name__ == '__main__':
+    app.run(debug=True, port=8083)

@@ -48,6 +48,7 @@ export class AddConnectionComponent implements OnInit {
   isFormValid: boolean = false;
   savedConnection: Connection | null = null;
   successMessage: string = '';
+  errorMessage: string = '';
 
   constructor(private router: Router, private connectionService: ConnectionService) {}
 
@@ -70,9 +71,9 @@ export class AddConnectionComponent implements OnInit {
         },
         error => {
           console.error('Error saving connection:', error);
-          this.successMessage = 'Failed to save connection.';
+          this.errorMessage = 'Failed to save connection, please verify  Name  and  IP Address  and try again';
           setTimeout(() => {
-            this.successMessage = '';
+            this.errorMessage = '';
           }, 2000); // Show error message for 2 seconds before clearing
         }
       );
@@ -87,6 +88,10 @@ export class AddConnectionComponent implements OnInit {
   }
 
   goBack(): void {
+    this.router.navigate(['/']);
+  }
+
+  goToHome(): void {
     this.router.navigate(['/']);
   }
 }

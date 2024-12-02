@@ -17,17 +17,21 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AddConnectionComponent } from './add-connection/add-connection.component';
 import { SelectConnectionComponent } from './select-connection/select-connection.component';
-import { ConfigureComponent } from './configure/configure.component';
 import { TagManagerComponent } from './tag-manager/tag-manager.component';
+import { ReadTagsComponent } from './read-tags/read-tags.component';
+import { WriteTagsComponent } from './write-tags/write-tags.component';
+import { DeleteConnectionComponent } from './delete-connection/delete-connection.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AddConnectionComponent,
-    SelectConnectionComponent,
-    ConfigureComponent,
-    TagManagerComponent
+    SelectConnectionComponent,   
+    TagManagerComponent,
+    ReadTagsComponent,
+    WriteTagsComponent,
+    DeleteConnectionComponent
   ],
   imports: [
     BrowserModule,

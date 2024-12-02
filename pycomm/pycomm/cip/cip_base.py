@@ -141,7 +141,7 @@ PACK_DATA_FUNCTION = {
     'BYTE': pack_sint,     # byte string 8-bits
     'WORD': pack_uint,     # byte string 16-bits
     'DWORD': pack_dint,    # byte string 32-bits
-    'LWORD': pack_lint    # byte string 64-bits
+    'STRING': pack_lint    # byte string 64-bits
 }
 
 
@@ -157,7 +157,7 @@ UNPACK_DATA_FUNCTION = {
     'BYTE': unpack_sint,     # byte string 8-bits
     'WORD': unpack_uint,     # byte string 16-bits
     'DWORD': unpack_dint,    # byte string 32-bits
-    'LWORD': unpack_lint    # byte string 64-bits
+    'STRING': unpack_lint    # byte string 64-bits
 }
 
 
@@ -173,7 +173,7 @@ DATA_FUNCTION_SIZE = {
     'BYTE': 1,     # byte string 8-bits
     'WORD': 2,     # byte string 16-bits
     'DWORD': 4,    # byte string 32-bits
-    'LWORD': 8    # byte string 64-bits
+    'STRING': 8    # byte string 64-bits
 }
 
 UNPACK_PCCC_DATA_FUNCTION = {

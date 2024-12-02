@@ -40,6 +40,10 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/select-connection']);
   }
 
+  openDeleteConnection(): void {
+    this.router.navigate(['/delete-connection']);
+  }
+
   goToHome(): void {
     this.router.navigate(['/home']);
   }

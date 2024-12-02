@@ -1,3 +1,12 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevents scrolling on the whole page */
+}
+
 .menu-bar {
   display: flex;
   justify-content: space-between;
@@ -5,6 +14,9 @@
   padding: 10px;
   background-color: #2196F3; /* Standard color for the menu bar */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky; /* Keeps the menu bar fixed at the top */
+  top: 0;
+  z-index: 10; /* Ensures it stays above other elements */
 }
 
 button.mat-button {
@@ -33,6 +45,30 @@ button.mat-button:active {
   color: #FFEB3B; /* Yellow color on hover */
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9af7cd; /* Light background for the header */
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  position: sticky; /* Keeps the header fixed */
+  top: 50px; /* Adjusted to sit below the menu bar */
+  z-index: 9; /* Stays below the menu bar but above content */
+  overflow: hidden; /* Prevents scrolling in the header */
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #007bff;
+}
+
+.content {
+  height: calc(100vh - 100px); /* Ensures it takes up the remaining height of the viewport */
+  overflow-y: auto; /* Enables scrolling only for the content area */
+}
+
 .connections-list {
   display: flex;
   flex-wrap: wrap;
@@ -58,7 +94,3 @@ button.mat-button:active {
 .connection-box div {
   margin: 5px 0;
 }
-
-// .connection-box strong {
-//   color: #2196F3; /* Standard color for strong text in connections */
-// }

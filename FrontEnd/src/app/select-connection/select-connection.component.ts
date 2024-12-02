@@ -39,12 +39,15 @@ export class SelectConnectionComponent implements OnInit {
   }
 
   cancel(): void {
-    this.router.navigate(['/']);
+    if (this.selectedConnection) {
+      this.selectedConnection = null; // Unselect the connection
+      this.updateButtonGlow(); // Update button styles
+    }
   }
 
   updateButtonGlow(): void {
-    const okButton = document.querySelector('.actions button.ok');
-    const cancelButton = document.querySelector('.actions button.cancel');
+    const okButton = document.querySelector('.header-actions button.ok');
+    const cancelButton = document.querySelector('.header-actions button.cancel');
     if (this.selectedConnection) {
       okButton?.classList.add('glow-green');
       cancelButton?.classList.add('glow-yellow');
@@ -52,5 +55,9 @@ export class SelectConnectionComponent implements OnInit {
       okButton?.classList.remove('glow-green');
       cancelButton?.classList.remove('glow-yellow');
     }
+  }
+
+  goToHome(): void {
+    this.router.navigate(['/']);
   }
 }
